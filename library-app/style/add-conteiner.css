@@ -1,0 +1,64 @@
+#add-conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hello-text {
+  font-size: large;
+  font-weight: 500;
+}
+
+.add-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: large;
+  border: 3px solid #3c5617;
+  border-radius: 6px;
+  background-color: #d69b4c;
+  transition: all 0.5s ease;
+}
+.add-btn:hover,
+.add-btn:focus {
+  background-color: #c76c1f;
+  border: 3px solid #9a9e7f;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  #add-conteiner {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .hello-text {
+    width: 95%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 436px) and (max-width: 768px) {
+  #add-conteiner {
+    gap: 25px;
+    padding: 25px;
+  }
+
+  .hello-text {
+    width: 95%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #add-conteiner {
+    gap: 30px;
+    padding: 35px;
+  }
+
+  .hello-text {
+    width: 95%;
+    text-align: center;
+  }
+}

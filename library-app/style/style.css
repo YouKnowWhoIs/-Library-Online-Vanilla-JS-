@@ -1,0 +1,30 @@
+@import "../style/title.css";
+@import "../style/add-conteiner.css";
+@import "../style/book-list-conteiner.css";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #f4ddc0;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}

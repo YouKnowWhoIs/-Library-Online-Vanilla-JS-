@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/javascript.svg" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/library-app/style/style.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Online</title>
+  </head>
+  <body>
+    <header>
+      <div id="title-conteiner">
+        <div class="logo-conteiner">
+          <img src="/library-app/icons/book.svg" alt="Logo" class="logo" />
+          <p class="logo-text">Library</p>
+        </div>
+        <h1 class="title">Library Online</h1>
+      </div>
+    </header>
+
+    <main>
+      <div id="add-conteiner">
+        <p class="hello-text">
+          Вітаю! На цьому сайті ви можете створити список книг, які прочитали,
+          чи плануєте прочитати.
+        </p>
+        <button type="button" class="add-btn">
+          Додати книгу<img
+            src="/library-app/icons/add-outline.svg"
+            alt="add-outline"
+          />
+        </button>
+      </div>
+
+      <div id="book-list-conteiner">
+        <h2>Список Книг</h2>
+        <ul class="book-List"></ul>
+      </div>
+    </main>
+
+    <footer>
+      <div class="info-conteiner">
+        <p></p>
+      </div>
+    </footer>
+    <script type="module" src="/library-app/app.js"></script>
+  </body>
+</html>
