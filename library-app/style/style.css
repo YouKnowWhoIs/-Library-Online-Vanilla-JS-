@@ -1,6 +1,9 @@
 @import "../style/title.css";
 @import "../style/add-conteiner.css";
 @import "../style/book-list-conteiner.css";
+@import "../style/add-modal.css";
+@import "../style/item-book.css";
+@import "../style/info-conteiner.css";
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

@@ -28,11 +28,9 @@
           Вітаю! На цьому сайті ви можете створити список книг, які прочитали,
           чи плануєте прочитати.
         </p>
-        <button type="button" class="add-btn">
-          Додати книгу<img
-            src="/library-app/icons/add-outline.svg"
-            alt="add-outline"
-          />
+        <button type="button" class="open-modal-btn">
+          Додати книгу
+          <img src="/library-app/icons/add-outline.svg" />
         </button>
       </div>
 
@@ -43,10 +41,35 @@
     </main>
 
     <footer>
-      <div class="info-conteiner">
-        <p></p>
+      <div id="info-conteiner">
+        <p>Пет проєкт</p>
+        <p>Додавання книг, та видалення. З використанням локал сторе</p>
       </div>
     </footer>
+
+    <div id="add-modal">
+      <div class="add-modal-conteiner">
+        <div class="add-modal-content">
+          <img
+            src="/library-app/icons/cross.svg"
+            alt="exit"
+            class="close-modal"
+          />
+          <h3>Додати книгу</h3>
+          <input class="input-name" type="text" placeholder="Назва" />
+          <p class="error-name"></p>
+
+          <input class="input-author" type="text" placeholder="Автор" />
+          <p class="error-author"></p>
+
+          <input class="input-year" type="number" placeholder="Рік" />
+          <p class="error-year"></p>
+
+          <button class="add-btn" type="button">Додати</button>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="/library-app/app.js"></script>
   </body>
 </html>

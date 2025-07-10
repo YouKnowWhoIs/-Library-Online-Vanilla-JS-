@@ -71,4 +71,8 @@
     font-weight: 800;
     font-family: "Courier New", Courier, monospace;
   }
+
+  .title {
+    font-size: 40px;
+  }
 }

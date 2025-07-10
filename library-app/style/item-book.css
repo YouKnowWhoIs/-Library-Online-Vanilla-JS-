@@ -1,0 +1,37 @@
+.item-book {
+  list-style: none;
+  border: 3px solid #3c5617;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #9a9e7f;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-book img {
+  width: 120px;
+  height: 160px;
+  border-radius: 4px;
+}
+
+.item-book button {
+  margin: auto auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  padding: 5px 15px;
+  font-size: large;
+  border: 3px solid #3c5617;
+  border-radius: 6px;
+  background-color: #d69b4c;
+  transition: all 0.5s ease;
+}
+.item-book button:hover,
+.item-book button:focus {
+  background-color: #c76c1f;
+  border: 3px solid #9a9e7f;
+}

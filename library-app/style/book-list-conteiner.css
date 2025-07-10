@@ -6,11 +6,39 @@
   align-items: center;
 }
 
+.book-List {
+  padding: 0;
+  gap: 15px;
+}
+
 @media screen and (min-width: 320px) and (max-width: 425px) {
+  .book-List {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 436px) and (max-width: 768px) {
+  #book-list-conteiner {
+    padding: 20px;
+  }
+
+  .book-List {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 470px;
+  }
 }
 
 @media screen and (min-width: 769px) {
+  #book-list-conteiner {
+    padding: 30px;
+  }
+
+  .book-List {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
