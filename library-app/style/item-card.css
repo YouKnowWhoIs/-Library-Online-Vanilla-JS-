@@ -1,23 +1,44 @@
-.item-book {
+.item-card {
   list-style: none;
   border: 3px solid #3c5617;
   border-radius: 8px;
   padding: 10px;
   background-color: #9a9e7f;
   width: 200px;
-  height: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.item-book img {
+.read-card {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  font-size: larger;
+  margin: 0 0 auto auto;
+}
+
+.item-card img {
   width: 120px;
   height: 160px;
   border-radius: 4px;
 }
 
-.item-book button {
+.items-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: auto auto 0 auto;
+}
+
+.checked-read {
+  width: 30px;
+  height: 30px;
+}
+
+.item-card button {
   margin: auto auto 0 auto;
   display: flex;
   flex-direction: row;
@@ -30,8 +51,8 @@
   background-color: #d69b4c;
   transition: all 0.5s ease;
 }
-.item-book button:hover,
-.item-book button:focus {
+.item-card button:hover,
+.item-card button:focus {
   background-color: #c76c1f;
   border: 3px solid #9a9e7f;
 }

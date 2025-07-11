@@ -2,8 +2,9 @@
 @import "../style/add-conteiner.css";
 @import "../style/book-list-conteiner.css";
 @import "../style/add-modal.css";
-@import "../style/item-book.css";
+@import "../style/item-card.css";
 @import "../style/info-conteiner.css";
+@import "../style/filter.css";
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

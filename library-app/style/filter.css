@@ -1,0 +1,16 @@
+.filter-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-list p {
+  font-size: larger;
+}
+
+.filter-list select {
+  width: 60px;
+  height: 30px;
+  font-size: large;
+}
