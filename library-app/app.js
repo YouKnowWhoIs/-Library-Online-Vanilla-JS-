@@ -143,7 +143,7 @@ function renderBook(book) {
         book.checked ? "checked" : ""
       }/>
       </label>
-        <img alt="картинка книги" src="/public/no_cover_available.png" />
+        <img alt="картинка книги" src="./public/no_cover_available.png" />
         <h2>${book.name}</h2>
         <p>${book.author}</p>
         <p>${book.year}</p>
