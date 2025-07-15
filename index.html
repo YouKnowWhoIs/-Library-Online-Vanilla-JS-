@@ -38,24 +38,32 @@
         <h2>Список Книг</h2>
         <h3>Фільтрація</h3>
 
-        <div class="filter-conteiner">
-          <div class="filter-read-list">
-            <p>Прочитанно:</p>
-            <select class="filter-read-option">
-              <option value="filter1">---</option>
-              <option value="filter2">Нi</option>
-              <option value="filter3">Так</option>
-            </select>
-          </div>
+        <div class="filters-conteiner">
+          <div class="filters-items-conteiner">
+            <div class="filter-read-list">
+              <p>Прочитанно:</p>
+              <select class="filter-read-option">
+                <option value="filter1">---</option>
+                <option value="filter2">Нi</option>
+                <option value="filter3">Так</option>
+              </select>
+            </div>
 
-          <div class="filter-alf-list">
-            <p>По алфaвіту:</p>
-            <select class="filter-alf-option">
-              <option value="filter1">---</option>
-              <option value="filter2">А-Я</option>
-              <option value="filter3">Я-А</option>
-            </select>
+            <div class="filter-alf-list">
+              <p>По алфaвіту:</p>
+              <select class="filter-alf-option">
+                <option value="filter1">---</option>
+                <option value="filter2">А-Я</option>
+                <option value="filter3">Я-А</option>
+              </select>
+            </div>
           </div>
+          <input
+            class="search-book-name"
+            type="text"
+            placeholder="пошук за наазвою..."
+          />
+          <button class="clear-filtrs-btn">Очистити фільтри</button>
         </div>
 
         <ul class="book-List"></ul>

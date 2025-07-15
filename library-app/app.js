@@ -6,6 +6,9 @@ const errorName = document.querySelector(".error-name");
 const errorAuthor = document.querySelector(".error-author");
 const errorYear = document.querySelector(".error-year");
 const bookList = document.querySelector(".book-List");
+const filterReadSelect = document.querySelector(".filter-read-option");
+const filterAlfSelect = document.querySelector(".filter-alf-option");
+const searchBookName = document.querySelector(".search-book-name");
 
 let books = JSON.parse(localStorage.getItem("books")) || [];
 books.forEach(renderBook);
@@ -107,9 +110,6 @@ function addBtn() {
 }
 
 function filter() {
-  const filterReadSelect = document.querySelector(".filter-read-option");
-  const filterAlfSelect = document.querySelector(".filter-alf-option");
-
   function applyFilters() {
     let filterBooks = JSON.parse(localStorage.getItem("books")) || [];
 
@@ -131,6 +131,35 @@ function filter() {
 
   filterReadSelect.addEventListener("change", applyFilters);
   filterAlfSelect.addEventListener("change", applyFilters);
+
+  applyFilters();
+}
+
+function searchBook() {
+  const searchBooks = JSON.parse(localStorage.getItem("books")) || [];
+
+  searchBookName.addEventListener("input", () => {
+    const value = searchBookName.value.trim().toLowerCase();
+
+    const filtered = searchBooks.filter((book) =>
+      book.name.toLowerCase().includes(value)
+    );
+
+    bookList.innerHTML = "";
+    filtered.forEach(renderBook);
+  });
+}
+
+function clearFilter() {
+  const clearBtn = document.querySelector(".clear-filtrs-btn");
+
+  clearBtn.addEventListener("click", () => {
+    filterReadSelect.value = "filter1";
+    filterAlfSelect.value = "filter1";
+    searchBookName.value = "";
+
+    filter();
+  });
 }
 
 function renderBook(book) {
@@ -191,4 +220,6 @@ openBtn();
 closeModal();
 addBtn();
 filter();
+searchBook();
+clearFilter();
 imgBtnChange();

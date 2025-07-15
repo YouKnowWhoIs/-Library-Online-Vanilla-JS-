@@ -7,7 +7,14 @@
   gap: 5px;
 }
 
-.filter-conteiner {
+.filters-conteiner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.filters-items-conteiner {
   display: flex;
   flex-direction: row;
 }
@@ -38,13 +45,47 @@
   font-size: large;
 }
 
+.search-book-name {
+  padding: 5px 5px 5px 10px;
+  border: 3px solid #3c5617;
+  border-radius: 10px;
+  background-color: #9a9e7f;
+  margin: 10px 0 5px 0;
+  font-size: large;
+  transition: all 0.5s ease;
+}
+.search-book-name:hover,
+.search-book-name:focus {
+  border: 3px solid #9a9e7f;
+  background-color: #c4ca98;
+}
+
+.clear-filtrs-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  padding: 8px 0;
+  width: 180px;
+  font-size: large;
+  border: 3px solid #3c5617;
+  border-radius: 6px;
+  background-color: #d69b4c;
+  transition: all 0.5s ease;
+}
+.clear-filtrs-btn:hover,
+.clear-filtrs-btn:focus {
+  background-color: #c76c1f;
+  border: 3px solid #9a9e7f;
+}
+
 @media screen and (min-width: 320px) and (max-width: 425px) {
   .book-list {
     display: flex;
     flex-direction: column;
   }
 
-  .filter-conteiner {
+  .filters-items-conteiner {
     gap: 20px;
   }
 
@@ -52,6 +93,10 @@
   .filter-alf-list {
     display: flex;
     flex-direction: column;
+  }
+
+  .search-book-name {
+    width: 200px;
   }
 }
 
@@ -67,8 +112,12 @@
     width: 470px;
   }
 
-  .filter-conteiner {
+  .filters-items-conteiner {
     gap: 30px;
+  }
+
+  .search-book-name {
+    width: 300px;
   }
 }
 
@@ -83,7 +132,11 @@
     align-items: center;
   }
 
-  .filter-conteiner {
+  .filters-items-conteiner {
     gap: 40px;
+  }
+
+  .search-book-name {
+    width: 300px;
   }
 }
