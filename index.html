@@ -26,21 +26,38 @@
         </p>
         <button type="button" class="open-modal-btn">
           Додати книгу
-          <img src="./library-app/icons/add-outline.svg" alt="add book" />
+          <img
+            class="open-modal-btn-img"
+            src="./library-app/icons/add-outline.svg"
+            alt="add book"
+          />
         </button>
       </div>
 
-      <div id="book-list-conteiner">
+      <div id="book-list-filter-conteiner">
         <h2>Список Книг</h2>
         <h3>Фільтрація</h3>
-        <div class="filter-list">
-          <p>Прочитанно:</p>
-          <select class="filter-option">
-            <option value="filter1">---</option>
-            <option value="filter2">Нi</option>
-            <option value="filter3">Так</option>
-          </select>
+
+        <div class="filter-conteiner">
+          <div class="filter-read-list">
+            <p>Прочитанно:</p>
+            <select class="filter-read-option">
+              <option value="filter1">---</option>
+              <option value="filter2">Нi</option>
+              <option value="filter3">Так</option>
+            </select>
+          </div>
+
+          <div class="filter-alf-list">
+            <p>По алфaвіту:</p>
+            <select class="filter-alf-option">
+              <option value="filter1">---</option>
+              <option value="filter2">А-Я</option>
+              <option value="filter3">Я-А</option>
+            </select>
+          </div>
         </div>
+
         <ul class="book-List"></ul>
       </div>
     </main>

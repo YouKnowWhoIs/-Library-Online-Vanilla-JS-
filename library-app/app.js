@@ -107,29 +107,30 @@ function addBtn() {
 }
 
 function filter() {
-  const filterSelect = document.querySelector(".filter-option");
+  const filterReadSelect = document.querySelector(".filter-read-option");
+  const filterAlfSelect = document.querySelector(".filter-alf-option");
 
-  let filterBooks;
+  function applyFilters() {
+    let filterBooks = JSON.parse(localStorage.getItem("books")) || [];
 
-  books = JSON.parse(localStorage.getItem("books")) || [];
+    if (filterReadSelect.value === "filter2") {
+      filterBooks = filterBooks.filter((b) => b.checked === false);
+    } else if (filterReadSelect.value === "filter3") {
+      filterBooks = filterBooks.filter((b) => b.checked === true);
+    }
 
-  filterSelect.addEventListener("change", () => {
+    if (filterAlfSelect.value === "filter2") {
+      filterBooks = filterBooks.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (filterAlfSelect.value === "filter3") {
+      filterBooks = filterBooks.sort((a, b) => b.name.localeCompare(a.name));
+    }
     bookList.innerHTML = "";
 
-    if (filterSelect.value === "filter2") {
-      filterBooks = books.filter((b) => b.checked === false);
+    filterBooks.forEach(renderBook);
+  }
 
-      filterBooks.forEach(renderBook);
-    } else if (filterSelect.value === "filter3") {
-      filterBooks = books.filter((b) => b.checked === true);
-
-      filterBooks.forEach(renderBook);
-    } else {
-      filterBooks = books;
-
-      filterBooks.forEach(renderBook);
-    }
-  });
+  filterReadSelect.addEventListener("change", applyFilters);
+  filterAlfSelect.addEventListener("change", applyFilters);
 }
 
 function renderBook(book) {
@@ -164,7 +165,30 @@ function resetError() {
   });
 }
 
+function imgBtnChange() {
+  const btn = document.querySelector(".open-modal-btn");
+
+  btn.addEventListener("mouseover", () => {
+    btn.innerHTML = `Додати книгу
+          <img
+            class="open-modal-btn-img"
+            src="./library-app/icons/add-solid.svg"
+            alt="add book"
+          />`;
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    btn.innerHTML = `Додати книгу
+          <img
+            class="open-modal-btn-img"
+            src="./library-app/icons/add-outline.svg"
+            alt="add book"
+          />`;
+  });
+}
+
 openBtn();
 closeModal();
 addBtn();
 filter();
+imgBtnChange();

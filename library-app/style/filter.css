@@ -1,16 +1,89 @@
-.filter-list {
+#book-list-filter-conteiner {
+  margin-bottom: 30px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-conteiner {
+  display: flex;
+  flex-direction: row;
+}
+
+.book-list {
+  padding: 0;
+  gap: 15px;
+}
+
+.filter-read-list,
+.filter-alf-list {
+  padding: 0;
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: center;
 }
 
-.filter-list p {
+.filter-read-list p,
+.filter-alf-list p {
   font-size: larger;
 }
 
-.filter-list select {
+.filter-read-list select,
+.filter-alf-list select {
   width: 60px;
   height: 30px;
   font-size: large;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .book-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter-conteiner {
+    gap: 20px;
+  }
+
+  .filter-read-list,
+  .filter-alf-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 436px) and (max-width: 768px) {
+  #book-list-filter-conteiner {
+    padding: 20px;
+  }
+
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 470px;
+  }
+
+  .filter-conteiner {
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #book-list-filter-conteiner {
+    padding: 30px;
+  }
+
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter-conteiner {
+    gap: 40px;
+  }
 }

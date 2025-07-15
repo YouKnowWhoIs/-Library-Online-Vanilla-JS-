@@ -27,14 +27,6 @@
   border: 3px solid #9a9e7f;
 }
 
-.open-modal-btn img {
-  content: url("./library-app/icons/add-outline.svg");
-  transition: 0.5s ease;
-}
-.open-modal-btn:hover img {
-  content: url("./library-app/icons/add-solid.svg");
-}
-
 @media screen and (min-width: 320px) and (max-width: 425px) {
   #add-conteiner {
     gap: 20px;
